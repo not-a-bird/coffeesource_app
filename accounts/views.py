@@ -14,7 +14,7 @@ from .data import PAPAPEPPER_CONTEST_ENTRIES
 from .utils import get_user_posts
 
 
-s = Steem()
+s = Steem(nodes=['https://api.steemit.com',])
 
 
 class UsernameSearchFormView(View):
@@ -240,7 +240,7 @@ class PepperView(TemplateView):
         if username in SELFIE_CONTEST_PLAYERS:
             registered = True
 
-            s = Steem()
+            s = Steem(nodes=['https://api.steemit.com',])
 
             for entry_dict in PAPAPEPPER_CONTEST_ENTRIES:
                 selfie_dict = {

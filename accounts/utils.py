@@ -4,7 +4,7 @@ from steem import Steem
 
 
 def get_user_posts(username, from_id):
-    s = Steem()
+    s = Steem(nodes=['https://api.steemit.com',])
 
     blog_entries = s.get_blog(
         account=username,

@@ -7,7 +7,7 @@ register = template.Library()
 
 @register.assignment_tag
 def get_last_ecoinstant_entry():
-    s = Steem()
+    s = Steem(nodes=['https://api.steemit.com',])
     blog_entries = s.get_blog(
         account='ecoinstant',
         entry_id=0,
